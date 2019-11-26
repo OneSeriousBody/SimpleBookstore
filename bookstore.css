@@ -1,0 +1,85 @@
+    .clear{
+		clear:both;
+	}
+	#top_left{
+		width:300px;
+		float: left;
+	}
+	#top_right{
+		width:400px;
+		float: right;
+		margin-top:20px;
+		font-size: 15px;
+	}
+	#top_right a{
+		text-decoration: underline; /* 链接样式 */
+		color:#3333ff
+	}
+	#top_right a:hover{  /* 鼠标移到链接上的颜色 */
+		color:#ff3366;
+	}
+	#menu{
+		background-color: #cccc00;
+		border-top:2px solid #cc3300;   /* 上边框的横幅 */
+		padding: 10px 0px;  /* 上下行内间距10，左右为0 */
+		text-align: center;
+	}
+	#menu a{
+		margin: 0 8px;
+		color: #0000cc;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 15px;
+	}
+	#menu a:hover{
+		color: #ff0000;
+	}
+	#menu .all{
+		color: yellow
+	}	
+	#content{
+		width:900px;
+		margin:8px auto 15px; 
+	}
+	#content_top{
+		text-align: left;
+		font-size:15px;
+	}
+	#content_bottom{
+		border:1px solid #999;		/* 边框：1像素 实线 颜色 */
+		background-color: #FCFDEF;
+		padding:10px 15px;			/* 上内边距和下内边距是 10px  右内边距和左内边距是 15px */
+	}
+	#content_bottom h1{
+		font-size: 15px;
+		display: inline;
+	}
+	#content_bottom span{
+		font-size: 13px;
+	}
+	#book1,#book2,#book3,#book4,#book5,#book6,#book7,#book8,#book9{
+		float: left;
+		width: 25%;
+		text-align: center;
+		padding:10px 0px;
+	}
+	.bookimg img{    /* 书的宽高 */
+		width: 130px;
+		height: 136px;
+	}
+    #bottom{
+        background-color: #EFEEDC;
+        height:60px;
+        padding:10px 0px;
+    }
+	
+	#bottom_left{
+		width: 400px;
+		float: left;
+		margin-left: 200px;
+	}
+	#bottom_right{
+		width: 500px;
+		float: left;
+		line-height:28px;  /*行高*/
+	}

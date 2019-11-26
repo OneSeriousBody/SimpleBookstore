@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="bookstore.css" rel="stylesheet" type="text/css" />
+<title>online-bookstore</title>
+</head>
+<script type="text/javascript" src="bookstore.js"></script>
+
+<body>
+	<div id="page">
+		<div id="top">
+			<div id="top_left">
+				<h2><font>网上书城</font></h2>
+			</div>
+			<div id="top_right">
+				<a href="cart.html" onclick="return checkCookie1('username')" target="_self">购物车</a>|
+				<a href="#" id="login" onclick="return checkCookie2('username')" target="_self">登录</a>|
+				<a href="regist.html">新用户注册</a>
+			</div>
+		</div>
+		<div class="clear"></div>  <!-- 清除同行元素，不允许其它元素与之在一行内 -->
+		<div id="menu">
+			<a href="#" onclick="change1()">全部分类</a>
+			<a href="#" onclick="change2()">JavaSE分类</a>
+			<a href="#" onclick="change3()">JavaEE分类</a>
+			<a href="#" onclick="change4()">JavaScript分类</a>
+		</div>
+		<div id="content">
+			<div id="content_top">
+				<span id="span2">首页 > 全部分类 </span>
+			</div>
+			<div id="content_bottom">
+				<h1>商品目录</h1>
+				<hr/>
+				<h1 id="h11">全部</h1>
+				<span id="span1">共9中商品</span>
+				<hr/>
+				<div id="productlist">
+					<div id="booklist">
+						<div id="book1">
+							<div class="bookimg">
+								<img src="book_img/8758723-1_l.jpg" border="0"/></a>
+							</div>
+								<font color=blue>Java就业培训教程</font><br/>
+								<font color=blue>价格：28</font><br/>
+							<input type="button" value="购买" onclick="checkCookie3('username','book1')"/>
+						</div>
+						<div id="book2">
+							<div class="bookimg">
+								<img src="book_img/8991366-1_l.jpg" border="0"/></a>
+							</div>
+								<font color=blue>精通Hibernate</font><br/>
+								<font color=blue>价格：38</font><br/>
+							<input type="button" value="购买" onclick="checkCookie3('username','book2')"/>
+						</div>
+						<div id="book3">
+							<div class="bookimg">
+								<img src="book_img/9265169-1_l.jpg" border="0"/></a>
+							</div>
+								<font color=blue>Head First Java</font><br/>
+								<font color=blue>价格：40</font><br/>
+							<input type="button" value="购买" onclick="checkCookie3('username','book3')"/>
+						</div>
+						<div id="book4">
+							<div class="bookimg">
+								<img src="book_img/9317290-1_l.jpg" border="0"/></a>
+							</div>
+								<font color=blue>Java编程思想</font><br/>
+								<font color=blue>价格：35</font><br/>
+							<input type="button" value="购买" onclick="checkCookie3('username','book4')"/>
+						</div>
+						<div id="book5">
+							<div class="bookimg">
+								<img src="book_img/20029394-1_l.jpg" border="0"/></a>
+							</div>
+								<font color=blue>Spring企业开发</font><br/>
+								<font color=blue>价格：56</font><br/>
+							<input type="button" value="购买" onclick="checkCookie3('username','book5')"/>
+						</div>
+						<div id="book6">
+							<div class="bookimg">
+								<img src="book_img/20285763-1_l.jpg" border="0"/></a>
+							</div>
+								<font color=blue>Java核心技术</font><br/>
+								<font color=blue>价格：55</font><br/>
+							<input type="button" value="购买" onclick="checkCookie3('username','book6')"/>
+						</div>
+						<div id="book7">
+							<div class="bookimg">
+								<img src="book_img/20385925-1_l.jpg" border="0"/></a>
+							</div>
+								<font color=blue>Struts2深入理解</font><br/>
+								<font color=blue>价格：40</font><br/>
+							<input type="button" value="购买" onclick="checkCookie3('username','book7')"/>
+						</div>
+						<div id="book8">
+							<div class="bookimg">
+								<img src="book_img/22722790-1_l.jpg" border="0"/></a>
+							</div>
+								<font color=blue>JavaScript</font><br/>
+								<font color=blue>价格：51</font><br/>
+							<input type="button" value="购买" onclick="checkCookie3('username','book8')"/>
+						</div>
+						<div id="book9">
+							<div class="bookimg">
+								<img src="book_img/22788412-1_l.jpg" border="0"/></a>
+							</div>
+								<font color=blue>JavaWeb开发</font><br/>
+								<font color=blue>价格：70</font><br/>
+							<input type="button" value="购买" onclick="checkCookie3('username','book9')"/>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="bottom">
+			 <div id="bottom_left">
+				<img alt="" src="">
+			</div> 
+			<div id="bottom_right">
+				<span>Java Web Program Design</span><br/>
+				<span>create by fadeprogramerWZT on November 25,2019</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
