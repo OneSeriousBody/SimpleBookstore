@@ -5,8 +5,8 @@
 <link href="bookstore.css" rel="stylesheet" type="text/css" />
 <title>online-bookstore</title>
 </head>
-<script type="text/javascript" src="bookstore.js"></script>
-
+<script type="text/javascript" src="bookstore.js">
+</script>
 <body>
 	<div id="page">
 		<div id="top">
@@ -26,6 +26,23 @@
 			<a href="#" onclick="change3()">JavaEE分类</a>
 			<a href="#" onclick="change4()">JavaScript分类</a>
 		</div>
+		<div id="search">
+			<span>Search</span>
+			<input id="searchtext" list="bookdown" type="text" value=""/>
+			<datalist id="bookdown">
+				<option value="Java就业培训教程">
+				<option value="精通Hibernate">
+				<option value="Head First Java">
+				<option value="Java编程思想">
+				<option value="Spring企业开发">
+				<option value="Java核心技术">
+				<option value="Struts2深入理解">
+				<option value="JavaScript">
+				<option value="JavaWeb开发">
+			</datalist>
+			<input type="button" value="搜索" onclick="searchbook()"/>
+		</div>
+
 		<div id="content">
 			<div id="content_top">
 				<span id="span2">首页 > 全部分类 </span>
@@ -44,7 +61,10 @@
 							</div>
 								<font color=blue>Java就业培训教程</font><br/>
 								<font color=blue>价格：28</font><br/>
-							<input type="button" value="购买" onclick="checkCookie3('username','book1')"/>
+								<input id="down" type="button" value="-" onclick="if(document.getElementById('count1').value > 1){document.getElementById('count1').value--}">
+								<input type="text" size=2 value="1" id="count1" class="text">
+								<input id="up" type="button" value="+" onclick="document.getElementById('count1').value++"><br/>
+								<input type="button" value="购买" onclick="checkCookie3('username','book1','count1',document.getElementById('count1').value)"/>
 						</div>
 						<div id="book2">
 							<div class="bookimg">
@@ -52,7 +72,10 @@
 							</div>
 								<font color=blue>精通Hibernate</font><br/>
 								<font color=blue>价格：38</font><br/>
-							<input type="button" value="购买" onclick="checkCookie3('username','book2')"/>
+								<input id="down" type="button" value="-" onclick="if(document.getElementById('count2').value > 1){document.getElementById('count2').value--}">
+								<input type="text" size=2 value="1" id="count2" class="text">
+								<input id="up" type="button" value="+" onclick="document.getElementById('count2').value++"><br/>
+								<input type="button" value="购买" onclick="checkCookie3('username','book2','count2',document.getElementById('count2').value)"/>
 						</div>
 						<div id="book3">
 							<div class="bookimg">
@@ -60,7 +83,10 @@
 							</div>
 								<font color=blue>Head First Java</font><br/>
 								<font color=blue>价格：40</font><br/>
-							<input type="button" value="购买" onclick="checkCookie3('username','book3')"/>
+								<input id="down" type="button" value="-" onclick="if(document.getElementById('count3').value > 1){document.getElementById('count3').value--}">
+								<input type="text" size=2 value="1" id="count3" class="text">
+								<input id="up" type="button" value="+" onclick="document.getElementById('count3').value++"><br/>
+								<input type="button" value="购买" onclick="checkCookie3('username','book3','count3',document.getElementById('count3').value)"/>
 						</div>
 						<div id="book4">
 							<div class="bookimg">
@@ -68,7 +94,10 @@
 							</div>
 								<font color=blue>Java编程思想</font><br/>
 								<font color=blue>价格：35</font><br/>
-							<input type="button" value="购买" onclick="checkCookie3('username','book4')"/>
+								<input id="down" type="button" value="-" onclick="if(document.getElementById('count4').value > 1){document.getElementById('count4').value--}">
+								<input type="text" size=2 value="1" id="count4" class="text">
+								<input id="up" type="button" value="+" onclick="document.getElementById('count4').value++"><br/>
+								<input type="button" value="购买" onclick="checkCookie3('username','book4','count4',document.getElementById('count4').value)"/>
 						</div>
 						<div id="book5">
 							<div class="bookimg">
@@ -76,7 +105,10 @@
 							</div>
 								<font color=blue>Spring企业开发</font><br/>
 								<font color=blue>价格：56</font><br/>
-							<input type="button" value="购买" onclick="checkCookie3('username','book5')"/>
+								<input id="down" type="button" value="-" onclick="if(document.getElementById('count5').value > 1){document.getElementById('count5').value--}">
+								<input type="text" size=2 value="1" id="count5" class="text">
+								<input id="up" type="button" value="+" onclick="document.getElementById('count5').value++"><br/>
+								<input type="button" value="购买" onclick="checkCookie3('username','book5','count5',document.getElementById('count5').value)"/>
 						</div>
 						<div id="book6">
 							<div class="bookimg">
@@ -84,7 +116,10 @@
 							</div>
 								<font color=blue>Java核心技术</font><br/>
 								<font color=blue>价格：55</font><br/>
-							<input type="button" value="购买" onclick="checkCookie3('username','book6')"/>
+								<input id="down" type="button" value="-" onclick="if(document.getElementById('count6').value > 1){document.getElementById('count6').value--}">
+								<input type="text" size=2 value="1" id="count6" class="text">
+								<input id="up" type="button" value="+" onclick="document.getElementById('count6').value++"><br/>
+								<input type="button" value="购买" onclick="checkCookie3('username','book6','count6',document.getElementById('count6').value)"/>
 						</div>
 						<div id="book7">
 							<div class="bookimg">
@@ -92,7 +127,10 @@
 							</div>
 								<font color=blue>Struts2深入理解</font><br/>
 								<font color=blue>价格：40</font><br/>
-							<input type="button" value="购买" onclick="checkCookie3('username','book7')"/>
+								<input id="down" type="button" value="-" onclick="if(document.getElementById('count7').value > 1){document.getElementById('count7').value--}">
+								<input type="text" size=2 value="1" id="count7" class="text">
+								<input id="up" type="button" value="+" onclick="document.getElementById('count7').value++"><br/>
+								<input type="button" value="购买" onclick="checkCookie3('username','book7','count7',document.getElementById('count7').value)"/>
 						</div>
 						<div id="book8">
 							<div class="bookimg">
@@ -100,7 +138,10 @@
 							</div>
 								<font color=blue>JavaScript</font><br/>
 								<font color=blue>价格：51</font><br/>
-							<input type="button" value="购买" onclick="checkCookie3('username','book8')"/>
+								<input id="down" type="button" value="-" onclick="if(document.getElementById('count8').value > 1){document.getElementById('count8').value--}">
+								<input type="text" size=2 value="1" id="count8" class="text">
+								<input id="up" type="button" value="+" onclick="document.getElementById('count8').value++"><br/>
+								<input type="button" value="购买" onclick="checkCookie3('username','book8','count8',document.getElementById('count8').value)"/>
 						</div>
 						<div id="book9">
 							<div class="bookimg">
@@ -108,7 +149,10 @@
 							</div>
 								<font color=blue>JavaWeb开发</font><br/>
 								<font color=blue>价格：70</font><br/>
-							<input type="button" value="购买" onclick="checkCookie3('username','book9')"/>
+								<input id="down" type="button" value="-" onclick="if(document.getElementById('count9').value > 1){document.getElementById('count9').value--}">
+								<input type="text" size=2 value="1" id="count9" class="text">
+								<input id="up" type="button" value="+" onclick="document.getElementById('count9').value++"><br/>
+								<input type="button" value="购买" onclick="checkCookie3('username','book9','count9',document.getElementById('count9').value)"/>
 						</div>
 						<div class="clear"></div>
 					</div>

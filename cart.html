@@ -6,21 +6,34 @@
 </head>
 <style>
 	#sub{
-		margin-left:550px;
+		margin-left:600px;
 		width:5%
+	}
+	#totalitem{
+		margin-left:600px;
+	}
+	#total{
+		color:#ff0000
 	}
 </style>
 <script type="text/javascript" src="cart.js"></script>
 <body>
 <h3><font>购物车</font></h3>
-	<table id="tab" width=45% border=1>
+	<table id="tab" width=45% border=1 color=#cc9900>
 		<tr>
 			<td colspan=3 align=center>封面</td>
 			<td colspan=3 align=center>书名</td>
 			<td colspan=2 align=center>单价</td>
+			<td colspan=2 align=center>数量</td>
+			<td colspan=2 align=center>总价格</td>
 			<td colspan=1 align=center>操作</td>
 		</tr>
 	</table>
-	<input id="sub" type="submit" value="付款">
+	<div id="totalitem">
+		<b>合计</b>
+		<b id="total"></b>
+		<b>元</b>
+	</div>
+	<input id="sub" type="submit" value="付款" onclick="pay()">
 </body>
 </html>
